@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="subpage-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商店 │ GREENSTONE</title>
+  <meta name="description" content="GREENSTONE 商店頁面，包含藝術商品、植栽商品與禮品商品三大區塊。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage shop-page">
+  <div class="shop-announcement">單筆訂單滿 NT$ 3,000 免運</div>
+  <div class="shop-announcement shop-announcement-dark">新季選品已上架 →</div>
+  <div class="shop-announcement">空間搭配與禮品包裝可私訊諮詢 →</div>
+
+  <header class="shop-header">
+    <a class="shop-logo" href="index.html">GREENSTONE</a>
+    <nav aria-label="主要導覽">
+      <a href="space.html">SOLUTION</a>
+      <a href="gift.html">GIFT</a>
+      <a href="shop.html">SHOP</a>
+    </nav>
+  </header>
+
+  <main class="subpage-main">
+    <section class="shop-hero">
+      <div class="shop-hero-visual" aria-hidden="true"></div>
+      <div class="shop-hero-copy">
+        <p>巡る色彩、暮らしに薫る。</p>
+        <h1>Art, Plants and Living Space</h1>
+        <span>GREENSTONE 選品商店</span>
+      </div>
+    </section>
+
+    <section class="shop-intro" id="商品分類">
+      <a class="shop-pill" href="#禮品商品區塊">禮品選品はこちら</a>
+      <p>以植物、藝術與日常物件，整理能放進生活的低彩度選品。</p>
+    </section>
+
+    <section id="藝術商品區塊" class="product-section">
+      <div class="product-heading">
+        <h2>Art products</h2>
+        <p><a href="#藝術商品區塊">prints</a> ／ <a href="#植栽商品區塊">plants</a> ／ <a href="#禮品商品區塊">home goods</a></p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><a class="product-image product-image-print-a" href="space.html" aria-label="Botanical Print 01"></a><h3>Botanical Print 01</h3><span>NT$ 2,800</span></article>
+        <article class="product-card"><a class="product-image product-image-print-b" href="space.html" aria-label="Small Frame Set"></a><h3>Small Frame Set</h3><span>NT$ 3,600</span></article>
+        <article class="product-card"><a class="product-image product-image-print-c" href="space.html" aria-label="Original Work Card"></a><h3>Original Work Card</h3><span>NT$ 680</span></article>
+      </div>
+    </section>
+
+    <section id="植栽商品區塊" class="product-section">
+      <div class="product-heading">
+        <h2>Plant products</h2>
+        <p><a href="#植栽商品區塊">desk green</a> ／ <a href="#植栽商品區塊">styling pot</a> ／ <a href="#植栽商品區塊">living tree</a></p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><a class="product-image product-image-plant-a" href="space.html" aria-label="Monstera Pot"></a><h3>Monstera Pot</h3><span>NT$ 1,800</span></article>
+        <article class="product-card"><a class="product-image product-image-plant-b" href="space.html" aria-label="Desk Green Set"></a><h3>Desk Green Set</h3><span>NT$ 1,280</span></article>
+        <article class="product-card"><a class="product-image product-image-plant-c" href="space.html" aria-label="Olive Styling Pot"></a><h3>Olive Styling Pot</h3><span>NT$ 3,200</span></article>
+      </div>
+    </section>
+
+    <section id="禮品商品區塊" class="product-section">
+      <div class="product-heading">
+        <h2>Gift products</h2>
+        <p><a href="#禮品商品區塊">gift set</a> ／ <a href="#禮品商品區塊">seasonal</a> ／ <a href="#禮品商品區塊">wrapping</a></p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><a class="product-image product-image-gift-a" href="gift.html" aria-label="Botanical Gift Set"></a><h3>Botanical Gift Set</h3><span>NT$ 2,400</span></article>
+        <article class="product-card"><a class="product-image product-image-gift-b" href="gift.html" aria-label="Frame & Green"></a><h3>Frame & Green</h3><span>NT$ 3,800</span></article>
+        <article class="product-card"><a class="product-image product-image-gift-c" href="gift.html" aria-label="Seasonal Selection"></a><h3>Seasonal Selection</h3><span>NT$ 2,980</span></article>
+      </div>
+    </section>
+
+    <section class="shop-about">
+      <div class="shop-about-image" aria-hidden="true"></div>
+      <div>
+        <h2>About GREENSTONE Selection</h2>
+        <p>我們以自然色、植物線條與藝術紙品為基礎，整理適合居家、工作桌與送禮的生活物件。</p>
+        <a class="shop-text-link" href="space.html">learn more</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    window.addEventListener('load', () => {
+      if (!location.hash) return;
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      target?.scrollIntoView({ block: 'start' });
+    });
+  </script>
+</body>
+</html>

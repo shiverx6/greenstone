@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management │ ALFALFA DESIGN STUDIO</title>
+  <meta name="description" content="Project management hero page inspired by the first section of ALFALFA DESIGN STUDIO.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="top">
+    <section class="firstView" aria-label="ALFALFA DESIGN STUDIO first view">
+      <div class="firstView_badge" aria-hidden="true">01</div>
+
+      <a class="firstView_mark" href="#top" aria-label="ALFALFA DESIGN STUDIO">
+        <strong>GREENSTONE</strong>
+        <span>ONLINE<br>GALLERY</span>
+      </a>
+
+      <nav class="firstView_globalNav" aria-label="Primary navigation">
+        <a href="space.html">SOLUTION</a>
+        <a href="gift.html">GIFT</a>
+        <a href="shop.html">SHOP</a>
+      </nav>
+
+      <a class="firstView_redstone" href="https://redstonetw.com/" target="_blank" rel="noreferrer">
+        REDSTONE
+      </a>
+
+      <div class="firstView_visual">
+        <div class="firstView_band firstView_band-behind parallax3" aria-hidden="true"></div>
+        <div class="firstView_band firstView_band-overlay parallax4" aria-hidden="true"></div>
+
+        <figure class="firstView_image parallax2">
+          <img class="fossil" src="assets/images/fossil.webp" alt="White fossil relief">
+          <span class="fossil-shadow" aria-hidden="true"></span>
+        </figure>
+
+        <p class="firstView_text parallax1">
+          A well-designed process leads to meaningful results.<br>
+          We bring project direction skills to creative work—<br>
+          as producers, directors, editors,<br>
+          PR professionals, and planners.
+        </p>
+
+        <div class="firstView_hello parallax1">HELLO</div>
+
+        <div class="firstView_quote firstView_quote-b parallax2" aria-hidden="true">
+          <p>If you’re happy and you know it, clap your hands.</p>
+          <span>Blue Spring（2002）</span>
+          <i></i>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="gallery-section features-section" aria-labelledby="features-title">
+      <div class="section-index">02</div>
+      <div class="features-grid">
+        <article class="feature-cell feature-copy feature-concept">
+          <span class="cell-kicker">Concept</span>
+          <p>藝術、植栽與空間不是分開存在的物件，而是共同形成生活氣質的元素。</p>
+        </article>
+        <div class="feature-cell feature-visual feature-visual-art" aria-hidden="true">
+          <span>Botanical Artwork</span>
+        </div>
+        <div class="feature-cell feature-brand" aria-hidden="true">
+          <strong>GREENSTONE</strong>
+          <small>Curated Gallery</small>
+        </div>
+        <a class="feature-cell feature-link feature-link-art" href="#artwork">
+          <span>藝術</span>
+          <small>Artwork</small>
+        </a>
+        <a class="feature-cell feature-link feature-link-plants" href="#plants">
+          <span>植栽</span>
+          <small>Plants</small>
+        </a>
+        <a class="feature-cell feature-link feature-link-space" href="space.html">
+          <span>空間</span>
+          <small>Solution</small>
+        </a>
+        <a class="feature-cell feature-link feature-link-gift" href="gift.html">
+          <span>禮品</span>
+          <small>Gift</small>
+        </a>
+        <div class="feature-cell feature-visual feature-visual-space" aria-hidden="true">
+          <span>Art & Plants Styling</span>
+        </div>
+        <a class="feature-cell shop-link" href="shop.html">
+          <span>線上商店</span>
+          <small>Online Shop</small>
+        </a>
+      </div>
+      <h2 id="features-title" class="page-title">GREENSTONE</h2>
+    </section>
+
+    <section id="artwork" class="gallery-section slider-section artist-slider" aria-labelledby="artwork-title">
+      <span id="藝術介紹區塊" class="anchor-target" aria-hidden="true"></span>
+      <div class="section-index">03</div>
+      <figure class="gallery-panel image-panel" data-artist-portrait></figure>
+      <figure class="gallery-panel image-panel" data-artist-artwork></figure>
+      <article class="gallery-panel text-panel">
+        <p class="section-label">Artist</p>
+        <h2 id="artwork-title" data-artist-name></h2>
+        <p class="item-type" data-artist-type></p>
+        <p class="item-description" data-artist-description></p>
+        <button class="gallery-button" type="button" data-slider-next="artist">Next Artist</button>
+      </article>
+    </section>
+
+    <section id="artwork-detail" class="gallery-section slider-section artwork-detail-slider" aria-labelledby="artwork-detail-title">
+      <div class="section-index">04</div>
+      <article class="gallery-panel text-panel">
+        <p class="section-label">Artwork Value</p>
+        <h2 id="artwork-detail-title" data-artwork-title></h2>
+        <p class="item-description" data-artwork-description></p>
+        <a class="gallery-button" href="shop.html#藝術商品區塊">View Art Shop</a>
+      </article>
+      <figure class="gallery-panel image-panel wide-image-panel" data-artwork-image></figure>
+    </section>
+
+    <section id="plants" class="gallery-section slider-section plants-slider" aria-labelledby="plants-title">
+      <span id="植栽介紹區塊" class="anchor-target" aria-hidden="true"></span>
+      <div class="section-index">05</div>
+      <article class="gallery-panel text-panel">
+        <p class="section-label">Plants</p>
+        <h2 id="plants-title" data-plant-name></h2>
+        <p class="item-type" data-plant-type></p>
+        <p class="item-description" data-plant-description></p>
+        <button class="gallery-button" type="button" data-slider-next="plant">Next Plant</button>
+      </article>
+      <figure class="gallery-panel image-panel" data-plant-image-one></figure>
+      <figure class="gallery-panel image-panel" data-plant-image-two></figure>
+    </section>
+
+    <section id="plants-detail" class="gallery-section slider-section plants-detail-slider" aria-labelledby="plants-detail-title">
+      <div class="section-index">06</div>
+      <figure class="gallery-panel image-panel wide-image-panel" data-plant-detail-image></figure>
+      <article class="gallery-panel text-panel">
+        <p class="section-label">Plant Styling</p>
+        <h2 id="plants-detail-title" data-plant-detail-title></h2>
+        <p class="item-description" data-plant-detail-description></p>
+        <a class="gallery-button" href="shop.html#植栽商品區塊">View Plant Shop</a>
+      </article>
+    </section>
+
+    <section id="gifts" class="gallery-section slider-section gifts-slider" aria-labelledby="gifts-title">
+      <span id="禮品介紹區塊" class="anchor-target" aria-hidden="true"></span>
+      <div class="section-index">07</div>
+      <article class="gallery-panel text-panel">
+        <p class="section-label">Gifts</p>
+        <h2 id="gifts-title" data-gift-name></h2>
+        <p class="item-type" data-gift-type></p>
+        <p class="item-description" data-gift-description></p>
+        <button class="gallery-button" type="button" data-slider-next="gift">Next Gift</button>
+      </article>
+      <figure class="gallery-panel image-panel" data-gift-image-one></figure>
+      <figure class="gallery-panel image-panel" data-gift-image-two></figure>
+    </section>
+
+    <section id="gifts-detail" class="gallery-section slider-section gifts-detail-slider" aria-labelledby="gifts-detail-title">
+      <div class="section-index">08</div>
+      <figure class="gallery-panel image-panel wide-image-panel" data-gift-detail-image></figure>
+      <article class="gallery-panel text-panel">
+        <p class="section-label">Gift Styling</p>
+        <h2 id="gifts-detail-title" data-gift-detail-title></h2>
+        <p class="item-description" data-gift-detail-description></p>
+        <a class="gallery-button" href="shop.html#禮品商品區塊">View Gift Shop</a>
+      </article>
+    </section>
+
+    <section id="contact" class="gallery-section contact-section" aria-labelledby="contact-title">
+      <div class="section-index">09</div>
+      <div class="contact-center">
+        <p id="contact-title" class="contact-lead">GREENSTONE 是一個關於藝術品、植栽與空間搭配的線上藝廊。</p>
+        <p class="contact-intro">我們相信作品、植物與空間之間可以形成安靜而持久的關係。每一次選件與配置，都從場域的光線、使用者的生活節奏，以及物件本身的質感開始。</p>
+        <a class="contact-url" href="https://greenstone.example" target="_blank" rel="noreferrer">https://greenstone.example</a>
+
+        <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+
+        <section class="contact-block" aria-label="Gallery information">
+          <h3>Greenstone Online Gallery</h3>
+          <p>藝術品・植栽・空間配套</p>
+          <p>〒000-0000  台北市中山區範例路 316</p>
+          <p>TEL　02-0000-0135</p>
+          <p>MAIL　hello@greenstone.example</p>
+          <a href="https://instagram.com/" target="_blank" rel="noreferrer">@greenstone_gallery</a>
+        </section>
+
+        <section class="contact-block" aria-label="Sales information">
+          <h3>製造販售元</h3>
+          <p>Greenstone Studio</p>
+          <p>〒000-0000  台北市大安區範例街 1123-3</p>
+          <p>TEL：02-0000-8181</p>
+          <p>FAX：02-0000-8182</p>
+          <a href="https://greenstone.example/shop" target="_blank" rel="noreferrer">https://greenstone.example/shop</a>
+        </section>
+
+        <p class="contact-footnote">「Greenstone products」是<br>將日常空間重新整理的一項提案。</p>
+        <a class="contact-url" href="https://greenstone.example/products" target="_blank" rel="noreferrer">https://greenstone.example/products</a>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-guide" href="#features" aria-label="Back to gallery navigation">↑</a>
+
+  <script src="script.js?v=plants-image-slider"></script>
+</body>
+</html>

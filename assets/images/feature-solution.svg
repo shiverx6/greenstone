@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="art and plants styling image">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9e5dc"/>
+      <stop offset="1" stop-color="#cfd6c8"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#room)"/>
+  <rect x="0" y="620" width="1600" height="280" fill="#d8d0c4" opacity=".55"/>
+  <rect x="260" y="138" width="430" height="328" rx="2" fill="#f5f1ea" opacity=".86"/>
+  <rect x="300" y="178" width="350" height="248" fill="#c9b8ad" opacity=".34"/>
+  <path d="M1014 718 C1016 570 1005 430 955 304" fill="none" stroke="#657359" stroke-width="12" stroke-linecap="round" opacity=".5"/>
+  <path d="M972 432 C866 382 830 300 873 230 C978 248 1029 318 972 432Z" fill="#879576" opacity=".5"/>
+  <path d="M1004 496 C1120 414 1204 420 1266 500 C1194 591 1094 592 1004 496Z" fill="#7f8e72" opacity=".46"/>
+  <path d="M966 558 C862 548 792 604 778 704 C889 744 960 686 966 558Z" fill="#a1ad8f" opacity=".44"/>
+  <ellipse cx="1010" cy="786" rx="156" ry="32" fill="#77786d" opacity=".16" filter="url(#blur)"/>
+  <rect x="210" y="700" width="1120" height="3" fill="#77786d" opacity=".12"/>
+</svg>
