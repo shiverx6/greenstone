@@ -1,6 +1,44 @@
 const parallaxItems = document.querySelectorAll('[class*="parallax"]');
 const floatingGuide = document.querySelector('.floating-guide');
 
+const spaceCards = Array.from(document.querySelectorAll('.space-post-card'));
+const spaceCategoryButtons = Array.from(document.querySelectorAll('.space-category-nav button[data-category]'));
+const spaceSearchForm = document.querySelector('.space-search');
+const spaceSearchInput = document.querySelector('#space-search');
+const spaceEmptyMessage = document.querySelector('.space-empty-message');
+let activeSpaceCategory = 'all';
+
+const filterSpaceArticles = () => {
+  if (!spaceCards.length) return;
+  const query = spaceSearchInput?.value.trim().toLocaleLowerCase('zh-Hant') ?? '';
+  let visibleCount = 0;
+
+  spaceCards.forEach((card) => {
+    const categories = card.dataset.category?.split(' ') ?? [];
+    const categoryMatches = activeSpaceCategory === 'all' || categories.includes(activeSpaceCategory);
+    const queryMatches = !query || card.textContent.toLocaleLowerCase('zh-Hant').includes(query);
+    card.hidden = !(categoryMatches && queryMatches);
+    if (!card.hidden) visibleCount += 1;
+  });
+
+  if (spaceEmptyMessage) spaceEmptyMessage.hidden = visibleCount !== 0;
+};
+
+spaceCategoryButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    activeSpaceCategory = button.dataset.category;
+    spaceCategoryButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+    filterSpaceArticles();
+  });
+});
+
+spaceSearchForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  filterSpaceArticles();
+});
+
+spaceSearchInput?.addEventListener('input', filterSpaceArticles);
+
 const artists = [
   {
     name: 'Kelly',
@@ -11,7 +49,7 @@ const artists = [
     artwork: 'Kelly Artwork 01',
     artworkImage: 'assets/images/artists/kelly-artwork.jpg',
     description:
-      'Kellykiwi 以水彩與線條捕捉人物、衣著與生活片刻，作品帶有時尚插畫的輕盈感，也保留手繪顏料的即興痕跡。她的創作橫跨現場速寫、插畫教學與空間美感，擅長把日常觀察轉化成明亮、柔軟且具有個人溫度的視覺語言。',
+      'Kellykiwi 以水彩與線條捕捉人物、衣著與生活片刻，作品保留顏料流動與手繪的即興痕跡。明確的輪廓與輕盈色層，適合放入採光良好的居家、工作室或商業空間，為牆面建立清楚而不張揚的視覺焦點。',
     colors: ['#e6ded2', '#d8cfc2'],
   },
   {
@@ -20,7 +58,7 @@ const artists = [
     portrait: 'Artist Portrait 02',
     artwork: 'Floral Work 02',
     description:
-      '許映庭擅長以花卉、枝葉與留白構成畫面，作品帶有柔和卻明確的節奏。她將植物視為空間中的情緒載體，讓畫作不只是牆面裝飾，而是能與光線、家具和生活狀態互相呼應的存在。',
+      '許映庭擅長以花卉、枝葉與留白構成畫面，作品呈現柔和而明確的節奏。她將植物視為空間中的情緒載體，使畫作能與自然光、木質家具、織品及真實植栽彼此呼應。',
     colors: ['#ddd6c9', '#e7d9d2'],
   },
   {
@@ -29,7 +67,7 @@ const artists = [
     portrait: 'Artist Portrait 03',
     artwork: 'Mixed Media 03',
     description:
-      '陳霧生以乾燥植物、紙張紋理與淡墨色塊創作，作品常呈現時間留下的痕跡。他關注植物從盛放到凋落的過程，並將其轉化為安靜、克制且富有收藏感的藝術語言。',
+      '陳霧生以乾燥植物、紙張紋理與淡墨色塊創作，保留植物從盛放到凋落的時間痕跡。作品色調沉靜、媒材層次清楚，適合與石材、深色木質及霧面金屬共同陳列。',
     colors: ['#d9d4cc', '#cbc4ba'],
   },
 ];
@@ -39,21 +77,21 @@ const artworkDetails = [
     title: 'Botanical Silence',
     image: 'Artwork Detail 01',
     description:
-      'Botanical Silence 以植物水彩為核心，透過透明色層、細緻葉脈與大量留白，呈現自然在日常空間中的安靜存在。作品適合放置於客廳、書房或接待空間，讓牆面不只是裝飾，而成為空間氣質的延伸。',
+      'Botanical Silence 以植物水彩為核心，透過透明色層、細緻葉脈與大量留白，呈現自然在室內的安靜存在。作品適合放置於客廳、書房或接待空間，並可與淺色木質、亞麻織品及線條簡潔的植栽搭配。',
     color: '#ded7ca',
   },
   {
     title: 'Light Garden',
     image: 'Artwork Detail 02',
     description:
-      'Light Garden 關注植物與光線的關係，將花瓣、葉影與空氣感轉化為柔和的畫面節奏。它適合與淺色家具、木質材質或植栽搭配，營造乾淨、自然且具有呼吸感的生活場景。',
+      'Light Garden 關注植物與光線的關係，將花瓣、葉影與明暗變化轉化為柔和的畫面節奏。作品適合與淺色家具、木質材質或植栽搭配，讓牆面與周圍物件保有清楚的距離和呼吸感。',
     color: '#e7ddd3',
   },
   {
     title: 'Dried Memory',
     image: 'Artwork Detail 03',
     description:
-      'Dried Memory 以乾燥植物與混合媒材創作，保留植物從生長到凋落的時間痕跡。作品具有較成熟、沉靜的視覺質感，適合用於展間、選物店、咖啡空間或具有收藏氛圍的住宅場域。',
+      'Dried Memory 以乾燥植物與混合媒材創作，保留植物從生長到凋落的時間痕跡。低彩度與紙張紋理適合用於展間、選物店、咖啡空間，或以石材和深色木質為主的住宅場域。',
     color: '#d1cbc2',
   },
 ];
@@ -67,7 +105,7 @@ const plants = [
     image2: 'Plant View 01B',
     image2Path: 'assets/images/plants/monstera-b.jpg',
     description:
-      '龜背芋擁有大面積葉片與自然裂葉，是最能建立空間存在感的植栽之一。它適合明亮室內、客廳角落或展售空間，能快速讓環境變得放鬆、有層次，也很適合搭配植物水彩作品。',
+      '龜背芋擁有大面積葉片與自然裂葉，能在客廳角落、接待區或展售空間建立明確的視覺重心。適合明亮的散射光環境，可搭配低矮家具、自然色盆器與植物水彩作品。',
     colors: ['#d9ded2', '#cbd4c0'],
   },
   {
@@ -78,7 +116,7 @@ const plants = [
     image2: 'Plant View 02B',
     image2Path: 'assets/images/plants/anthurium-b.jpg',
     description:
-      '火鶴有明確的花形與光澤感葉片，適合成為小型空間中的視覺亮點。它能替桌面、玄關或展示層架增加一點溫度，也適合搭配低彩度的畫作與陶器。',
+      '火鶴具有明確花形與帶有光澤的葉片，適合在桌面、玄關或展示層架形成小尺度焦點。可搭配低彩度畫作、霧面陶器與簡潔托盤，平衡其鮮明輪廓。',
     colors: ['#e4d5d0', '#d7c3bd'],
   },
   {
@@ -89,7 +127,7 @@ const plants = [
     image2: 'Plant View 03B',
     image2Path: 'assets/images/plants/china-doll-b.jpg',
     description:
-      '小豆樹的葉片細密、枝條輕盈，能讓空間出現柔和的綠意層次。它不會過度佔據視覺，適合放在書房、工作桌旁或需要安靜陪伴的角落。',
+      '小豆樹葉片細密、枝條輕盈，適合放在書房、工作桌旁或視覺密度較低的角落。它能柔化家具線條，又不會過度遮擋採光與主要視線。',
     colors: ['#dbe3d6', '#c9d5c1'],
   },
   {
@@ -100,7 +138,7 @@ const plants = [
     image2: 'Plant View 04B',
     image2Path: 'assets/images/plants/fiddle-leaf-fig-b.jpg',
     description:
-      '琴葉榕的葉片厚實、線條俐落，帶有一種自然又現代的雕塑感。它適合放在採光良好的空間，能與畫作、木質家具或白牆形成乾淨對比，是提升空間質感的經典選擇。',
+      '琴葉榕葉片厚實、線條俐落，具有清楚的垂直輪廓。適合放在採光良好的空間，與畫作、木質家具或白牆形成對比，並為較高的牆面建立尺度關係。',
     colors: ['#d3dacb', '#becab5'],
   },
 ];
@@ -110,21 +148,21 @@ const plantDetails = [
     title: 'Monstera Styling',
     image: 'Plant Styling 01',
     description:
-      '龜背芋適合用來建立空間的主視覺，它的大型葉片能與藝術畫作形成自然呼應。當畫作提供色彩與故事，植栽則提供生命感與立體層次，兩者搭配能讓空間從單純裝飾，轉變為完整的生活場景。',
+      '龜背芋適合用來建立空間主視覺，大型葉片能與藝術作品形成尺度上的呼應。畫作提供色彩與觀看焦點，植栽則加入立體層次與持續變化的生命感。',
     color: '#d7ddcf',
   },
   {
     title: 'Fiddle Leaf Styling',
     image: 'Plant Styling 02',
     description:
-      '琴葉榕的垂直線條很適合搭配現代住宅、工作室與選物空間。它能讓牆面、家具與藝術品之間產生視覺連結，尤其適合放在畫作旁邊，讓平面作品與真實植物形成一種安靜的對話。',
+      '琴葉榕的垂直線條適合現代住宅、工作室與選物空間。放置在畫作或低矮家具旁，能連接牆面高度與平面陳列，使不同尺度的元素形成連續的觀看關係。',
     color: '#cbd5c2',
   },
   {
     title: 'Olive Tree Styling',
     image: 'Plant Styling 03',
     description:
-      '橄欖樹適合營造輕盈、自然且不過度裝飾的空間感。它的枝葉線條能柔化室內結構，搭配淡色水彩或乾燥植物作品時，可以形成更成熟、安靜且具有收藏感的整體氛圍。',
+      '橄欖樹枝葉細緻、輪廓輕盈，能柔化室內結構而不遮擋視線。搭配淡色水彩、乾燥植物作品與自然陶盆，可建立沉靜且層次清楚的整體配置。',
     color: '#dfe1d6',
   },
 ];
@@ -136,7 +174,7 @@ const gifts = [
     image1: 'Gift Set 01A',
     image2: 'Gift Set 01B',
     description:
-      'Botanical Gift Set 將植物水彩卡片、小型植栽與自然香氛組成一份安靜的禮物。它適合送給剛搬入新家的朋友、喜歡植物的人，或需要一點日常儀式感的空間。',
+      'Botanical Gift Set 將植物水彩卡片、小型植栽與生活物件組合成一份能進入空間的禮物。適合入厝、生日或送給喜愛植物的人，並附上基本照護說明。',
     colors: ['#e6ded4', '#d8d0c3'],
   },
   {
@@ -145,7 +183,7 @@ const gifts = [
     image1: 'Gift Set 02A',
     image2: 'Gift Set 02B',
     description:
-      'Frame & Green 以小尺寸畫作搭配桌上植物，讓禮品不只是短暫的心意，而能成為對方日常空間的一部分。適合工作桌、玄關、床邊或書房角落。',
+      'Frame & Green 以小尺寸作品搭配桌上植栽，適合工作桌、玄關、床邊或書房角落。作品與植物在色彩和比例上經過搭配，收到後即可形成一個完整的小型陳列。',
     colors: ['#ded8cd', '#cbd5c6'],
   },
   {
@@ -154,7 +192,7 @@ const gifts = [
     image1: 'Gift Set 03A',
     image2: 'Gift Set 03B',
     description:
-      'Seasonal Selection 依照季節挑選植物素材、紙品與小型藝術物件。每一組都保留自然的色調與觸感，適合作為節慶、開幕、感謝或紀念性的禮物。',
+      'Seasonal Selection 依季節挑選植物素材、紙品與小型藝術物件，並控制整體色彩與材質關係。適合作為節慶、開幕、感謝或紀念性的禮物。',
     colors: ['#e8dfd7', '#d6c9bd'],
   },
 ];
@@ -164,21 +202,21 @@ const giftDetails = [
     title: 'Gift for New Home',
     image: 'Gift Styling 01',
     description:
-      '新居禮不一定需要昂貴或醒目。小型畫作、桌上植栽與自然材質物件，可以溫和地進入一個新的生活場域，讓空間從第一天開始有被整理過的安定感。',
+      '入厝禮可以從新空間的尺度、採光與使用方式出發。小型作品、桌上植栽與自然材質物件容易融入既有家具，也能為尚在形成中的生活場域建立一個清楚起點。',
     color: '#ded6cc',
   },
   {
     title: 'Gift for Work Desk',
     image: 'Gift Styling 02',
     description:
-      '工作桌上的禮物需要克制且實用。植物提供視覺休息，紙品與小畫作提供情緒標記，讓每天重複使用的地方多一點細節與專注感。',
+      '工作桌上的禮物需要控制尺寸並保留實用性。小型植物提供自然層次，紙品與作品建立觀看焦點，同時避免遮擋螢幕、文件與日常動線。',
     color: '#d7ded0',
   },
   {
     title: 'Gift for Quiet Celebration',
     image: 'Gift Styling 03',
     description:
-      '不張揚的慶祝更適合以質感和時間感表達。季節植物、低彩度紙品與手感物件能保留祝福，也避免讓禮物只剩下包裝上的熱鬧。',
+      '季節植物、低彩度紙品與能長久使用的器物，適合表達節慶、生日與感謝。禮物的價值不只在包裝，而在拆開之後仍能留在對方的生活與空間中。',
     color: '#e3d8cf',
   },
 ];

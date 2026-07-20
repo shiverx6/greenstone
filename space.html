@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>空間介紹 │ GREENSTONE</title>
-  <meta name="description" content="GREENSTONE 空間介紹，介紹藝術品與植栽的混搭方式。">
+  <title>空間專欄 │ GREENSTONE</title>
+  <meta name="description" content="GREENSTONE 空間專欄，從藝術、植栽、材質與生活選物，分享讓自然、藝術與生活共同完成空間的方法。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -23,18 +23,23 @@
   <main class="subpage-main space-archive">
     <section class="space-archive-header">
       <div>
-        <p class="space-archive-kicker">Read : The GREENSTONE ARTICLE</p>
-        <h1>空間介紹</h1>
+        <p class="space-archive-kicker">Read : The GREENSTONE JOURNAL</p>
+        <h1>空間</h1>
       </div>
       <h2>空間專欄</h2>
     </section>
 
+    <section class="space-archive-intro">
+      <p>空間不是物件的集合，而是光線、材質、植物、藝術與人的生活彼此回應的結果。</p>
+      <p>綠石子從空間策展的角度，分享植栽配置、藝術選擇與生活物件的搭配方法。每一篇文章都從實際場景出發，讓選品不只好看，也能自然進入日常。</p>
+    </section>
+
     <section class="space-archive-tools" aria-label="文章分類與搜尋">
       <nav class="space-category-nav" aria-label="空間文章分類">
-        <a href="#" class="is-active">全部文章</a>
-        <a href="#">藝術配置</a>
-        <a href="#">植栽搭配</a>
-        <a href="#">生活場景</a>
+        <button type="button" class="is-active" data-category="all">全部文章</button>
+        <button type="button" data-category="art">藝術配置</button>
+        <button type="button" data-category="plants">植栽搭配</button>
+        <button type="button" data-category="life">生活場景</button>
       </nav>
       <form class="space-search">
         <label for="space-search">文章搜尋</label>
@@ -44,59 +49,123 @@
     </section>
 
     <section class="space-post-grid" aria-label="空間文章列表">
-      <article class="space-post-card">
-        <a class="space-post-image space-post-image-art" href="shop.html" aria-label="以畫作決定空間的視覺重心"></a>
+      <article class="space-post-card" data-category="art">
+        <span class="space-post-image space-post-image-art" aria-hidden="true"></span>
         <div class="space-post-text">
-          <h3><a href="shop.html">以畫作決定空間的視覺重心</a></h3>
-          <p>先從一幅作品開始，觀察色彩、留白與線條，再決定植物的高度、葉形與擺放方向，讓每個物件都和主題產生關係。</p>
-          <a class="space-read-more" href="shop.html">READ MORE</a>
+          <p class="space-post-meta">ART &amp; CURATION</p>
+          <h3>藝術品如何改變一個空間的視覺重心</h3>
+          <p>一件作品不只填補牆面。它會重新安排觀看順序，牽動家具、光線與色彩的關係，並逐步成為空間性格的一部分。</p>
+          <details class="space-article-detail">
+            <summary>READ MORE</summary>
+            <div>
+              <h4>尺度決定觀看距離</h4>
+              <p>大型作品能建立主牆的秩序，適合在客廳、接待區或挑高空間形成穩定焦點；小型作品則適合近距離閱讀，可透過成組陳列與家具建立更細緻的節奏。選擇尺寸時，應同時考量牆面、家具寬度與主要觀看距離。</p>
+              <h4>色彩不是單純的配色</h4>
+              <p>作品可以延續空間既有的色調，也可以成為有意識的對比。關鍵不在顏色是否完全相同，而是明度、飽和度與材質反光之間是否取得平衡。自然光和夜間燈光，也會讓作品呈現不同層次。</p>
+              <h4>作品帶來不可複製的精神</h4>
+              <p>家具與材料建立空間的基礎，作品則讓空間開始表達選擇。創作背景、媒材痕跡與觀看感受，會在日常相處中逐漸累積，使空間更接近居住者或品牌真正想傳達的價值。</p>
+            </div>
+          </details>
         </div>
       </article>
-      <article class="space-post-card">
-        <a class="space-post-image space-post-image-plant" href="shop.html" aria-label="用植栽補足畫面之外的層次"></a>
+      <article class="space-post-card" data-category="plants">
+        <span class="space-post-image space-post-image-plant" aria-hidden="true"></span>
         <div class="space-post-text">
-          <h3><a href="shop.html">用植栽補足畫面之外的層次</a></h3>
-          <p>植物適合用來連接牆面、家具與光線。大型植物建立輪廓，小型植物讓桌面、層架與角落保留細節。</p>
-          <a class="space-read-more" href="shop.html">READ MORE</a>
+          <p class="space-post-meta">PLANTS &amp; SPACE</p>
+          <h3>讓植物成為空間的一部分，而不只是角落的裝飾</h3>
+          <p>植栽進入空間時，重要的不只是品種，而是尺度、光線、視線與照護方式。從一株植物的位置開始，理解綠意如何與家具及人的移動產生關係。</p>
+          <details class="space-article-detail">
+            <summary>READ MORE</summary>
+            <div>
+              <h4>先看空間，再選植物</h4>
+              <p>挑選之前，先確認採光方向、通風條件、日常動線與可照護的頻率。落地型植栽適合建立視覺重心；桌面或層架上的小型植物，則能補足近距離觀看的細節。</p>
+              <h4>用形態回應線條</h4>
+              <p>枝葉舒展的植物能柔化石材、金屬與俐落家具；輪廓明確、向上生長的植物，則適合延續建築的垂直線條。盆器的材質、色澤與高度，也會決定植物如何被空間看見。</p>
+              <h4>讓照護成為配置的一部分</h4>
+              <p>一個需要頻繁移動或難以澆水的位置，再好看也不會長久。綠石子依據環境與生活方式選擇植物和盆器，並提供清楚的光照、澆水與日常照護建議。</p>
+            </div>
+          </details>
         </div>
       </article>
-      <article class="space-post-card">
-        <a class="space-post-image space-post-image-light" href="shop.html" aria-label="依照光線與動線安排物件"></a>
+      <article class="space-post-card" data-category="plants">
+        <span class="space-post-image space-post-image-light" aria-hidden="true"></span>
         <div class="space-post-text">
-          <h3><a href="shop.html">依照光線與動線安排物件</a></h3>
-          <p>好的配置不只看起來漂亮，也需要符合日常使用。入口、工作桌、客廳與臥室各自需要不同密度。</p>
-          <a class="space-read-more" href="shop.html">READ MORE</a>
+          <p class="space-post-meta">MATERIAL &amp; LIGHT</p>
+          <h3>材質、光線與綠意：建立有呼吸感的室內層次</h3>
+          <p>空間的舒適不只來自柔軟或明亮，而是不同材質在光線裡有適當的輕重與距離。植物則讓靜止的表面，多了一層會變化的影子。</p>
+          <details class="space-article-detail">
+            <summary>READ MORE</summary>
+            <div>
+              <h4>用植物柔化硬質表面</h4>
+              <p>大面積石材與金屬具有清楚、穩定的輪廓，適合搭配線條較自由的葉片，讓邊界不那麼僵直。木質與陶器本身帶有溫度，可選擇輪廓簡潔的植物，避免所有元素都過度鬆散。</p>
+              <h4>觀察一天中的光</h4>
+              <p>同一個角落在早晨、午後與夜晚會有不同表情。配置時不只判斷亮度是否足夠，也要留意陰影落點、反光與眩光，讓作品與植物在不同時段都能被自然觀看。</p>
+              <h4>留白讓關係被看見</h4>
+              <p>適當距離能讓材質、植物與作品各自保有輪廓，也讓人的移動更從容。呼吸感來自比例，而不是物件數量。</p>
+            </div>
+          </details>
         </div>
       </article>
-      <article class="space-post-card">
-        <a class="space-post-image space-post-image-object" href="shop.html" aria-label="小物件整理空間的使用節奏"></a>
+      <article class="space-post-card" data-category="life">
+        <span class="space-post-image space-post-image-object" aria-hidden="true"></span>
         <div class="space-post-text">
-          <h3><a href="shop.html">小物件整理空間的使用節奏</a></h3>
-          <p>紙品、托盤、陶器與自然材質物件能建立停留點，讓藝術品與植栽不只是展示，而是被日常使用。</p>
-          <a class="space-read-more" href="shop.html">READ MORE</a>
+          <p class="space-post-meta">OBJECTS &amp; DAILY LIFE</p>
+          <h3>從一件物品開始，整理空間的生活節奏</h3>
+          <p>真正被頻繁看見與使用的，往往不是大型家具，而是桌面上的花器、托盤、器皿與小型物件。選對一件物品，也能重新整理一個角落。</p>
+          <details class="space-article-detail">
+            <summary>READ MORE</summary>
+            <div>
+              <h4>先從會使用的地方開始</h4>
+              <p>玄關承接每天進出的物品，餐桌需要在使用與留白之間轉換，床邊則需要安靜而直接的功能。從實際行為出發選擇托盤、器皿或花器，比單純填補空位更能長久融入生活。</p>
+              <h4>讓物件彼此有共同語言</h4>
+              <p>不需要讓所有材質一致，但可以透過色溫、表面質地或輪廓建立關聯。例如霧面陶器與自然石材能形成沉穩的連續性，透明玻璃則能減輕厚重家具旁的視覺重量。</p>
+              <h4>允許物件留下使用痕跡</h4>
+              <p>綠石子選擇能夠進入日常、也能經得起時間的物件，讓美感不只停留在剛被帶回家的那一刻。</p>
+            </div>
+          </details>
         </div>
       </article>
-      <article class="space-post-card">
-        <a class="space-post-image space-post-image-desk" href="shop.html" aria-label="工作桌需要低干擾的綠意"></a>
+      <article class="space-post-card" data-category="life">
+        <span class="space-post-image space-post-image-desk" aria-hidden="true"></span>
         <div class="space-post-text">
-          <h3><a href="shop.html">工作桌需要低干擾的綠意</a></h3>
-          <p>桌面配置應控制高度與色彩，讓植物提供呼吸感，畫作與卡片則維持視覺秩序，不干擾長時間工作。</p>
-          <a class="space-read-more" href="shop.html">READ MORE</a>
+          <p class="space-post-meta">COMMERCIAL SPACE</p>
+          <h3>商業空間的植栽與藝術配置，如何傳達品牌性格</h3>
+          <p>接待區、店面、辦公室與展示空間，都在無聲地傳遞品牌立場。植栽與藝術配置能建立第一印象，也能讓品牌價值被具體感受。</p>
+          <details class="space-article-detail">
+            <summary>READ MORE</summary>
+            <div>
+              <h4>從品牌核心建立選擇標準</h4>
+              <p>穩定、實驗、自然或精準，不同品牌特質會對應不同的作品尺度、植物形態與材質。先釐清希望被感受到的性格，再建立選品範圍，能避免空間只剩下流行元素的集合。</p>
+              <h4>在動線上安排視覺節點</h4>
+              <p>入口需要清楚的第一印象，等候區適合較耐看的作品與綠意，轉折或走道則可透過較小尺度的物件引導視線。視覺節點應配合人的停留時間，而不是平均分散在每一處。</p>
+              <h4>兼顧維護與更新</h4>
+              <p>商業環境的人流、空調、光線與管理方式，都會影響植栽選擇。綠石子的空間選配服務，將美感判斷與後續使用一併納入提案。</p>
+            </div>
+          </details>
         </div>
       </article>
-      <article class="space-post-card">
-        <a class="space-post-image space-post-image-entry" href="shop.html" aria-label="入口配置決定第一眼的空間溫度"></a>
+      <article class="space-post-card" data-category="art life">
+        <span class="space-post-image space-post-image-entry" aria-hidden="true"></span>
         <div class="space-post-text">
-          <h3><a href="shop.html">入口配置決定第一眼的空間溫度</a></h3>
-          <p>入口適合用一件視覺主角搭配耐看的植物，控制物件數量，讓進門動線清楚，同時保留自然感。</p>
-          <a class="space-read-more" href="shop.html">READ MORE</a>
+          <p class="space-post-meta">SPACE CURATION</p>
+          <h3>一個完整的空間，為什麼需要最後的選配</h3>
+          <p>家具進場、燈光完成之後，空間仍可能缺少生活的重心。最後的選配不是補滿空白，而是讓藝術、植栽與器物真正開始運作。</p>
+          <details class="space-article-detail">
+            <summary>READ MORE</summary>
+            <div>
+              <h4>先盤點，而不是先購買</h4>
+              <p>從現有家具、收藏、採光與生活習慣開始，確認真正缺少的是視覺重心、自然層次、收納秩序，還是近距離使用的細節。清楚盤點能減少重複購買，也讓預算集中在最能改變空間的項目。</p>
+              <h4>以比例串起不同元素</h4>
+              <p>作品、植物與器物進入空間後，需要共同回應家具高度、牆面寬度與人的視線。色彩不必完全一致，材質也不必成套；只要輕重、疏密與留白得到控制，就能形成連續的觀看節奏。</p>
+              <h4>讓空間保有生長的餘地</h4>
+              <p>完整不等於固定。植物會生長，收藏會增加，生活方式也會改變。好的選配會建立清楚基礎，同時保留調整與加入新物件的可能。</p>
+            </div>
+          </details>
         </div>
       </article>
     </section>
-
-    <section class="space-load-more">
-      <a class="gallery-button" href="shop.html">MORE</a>
-    </section>
+    <p class="space-empty-message" hidden>目前沒有符合條件的文章。</p>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
