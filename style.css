@@ -2060,6 +2060,12 @@ a {
   --product-bg: linear-gradient(135deg, #ddd6c2 0 50%, #72806a 50% 66%, #f7f4ec 66% 100%);
 }
 
+.product-image-fragrant-dracaena {
+  --product-bg: url("assets/images/products/fragrant-dracaena-01.jpg") center / cover no-repeat;
+}
+
+.product-image-fragrant-dracaena::before { display: none; }
+
 .product-image-gift-a {
   --product-bg: linear-gradient(140deg, #e9ddcf 0 44%, #f7f3e8 44% 66%, #b7a180 66% 100%);
 }
@@ -2125,6 +2131,62 @@ a {
   text-underline-offset: 0.24em;
 }
 
+.product-detail-main {
+  width: min(1180px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: clamp(56px, 8vw, 112px) 0;
+}
+
+.product-detail-back {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: rgba(17, 17, 17, 0.64);
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+  gap: clamp(42px, 7vw, 104px);
+  align-items: start;
+}
+
+.product-detail-gallery { display: grid; gap: 12px; }
+
+.product-detail-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: block;
+  object-fit: cover;
+  background: #f4f2ec;
+}
+
+.product-detail-gallery img:first-child { aspect-ratio: 4 / 3; }
+
+.product-detail-kicker {
+  margin: 0 0 14px;
+  color: rgba(52, 66, 56, 0.62);
+  letter-spacing: 0.18em;
+}
+
+.product-detail-copy h1 {
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+  font-size: clamp(34px, 4.4vw, 64px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.product-detail-copy p { color: rgba(17, 17, 17, 0.66); line-height: 1.9; }
+.product-detail-price { color: #111 !important; font-size: 20px; }
+.product-detail-summary { font-size: 18px; }
+.product-status-note, .product-coming-soon { padding: 18px 20px; background: rgba(52, 66, 56, 0.07); }
+.product-info-section { margin-top: 30px; }
+.product-info-section h2 { margin: 0 0 12px; font-size: 15px; letter-spacing: 0.1em; }
+.product-info-section dl { margin: 0; border-top: 1px solid rgba(17, 17, 17, 0.14); }
+.product-info-section dl div { padding: 11px 0; display: grid; grid-template-columns: 92px 1fr; gap: 16px; border-bottom: 1px solid rgba(17, 17, 17, 0.14); font-size: 13px; line-height: 1.7; }
+.product-info-section dt { color: rgba(17, 17, 17, 0.52); }
+.product-info-section dd { margin: 0; }
+
 @media (max-width: 800px) {
   .page-header {
     align-items: flex-start;
@@ -2133,6 +2195,7 @@ a {
   }
 
   .article-grid,
+  .product-detail-layout,
   .product-grid,
   .space-archive-header,
   .space-archive-tools,
