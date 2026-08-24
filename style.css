@@ -2084,6 +2084,12 @@ a {
 
 .product-image-golden-ring-of-fire::before { display: none; }
 
+.product-image-dragon-wing-star-fern {
+  --product-bg: url("assets/images/products/dragon-wing-star-fern-01.jpg") center / cover no-repeat;
+}
+
+.product-image-dragon-wing-star-fern::before { display: none; }
+
 .product-image-gift-a {
   --product-bg: linear-gradient(140deg, #e9ddcf 0 44%, #f7f3e8 44% 66%, #b7a180 66% 100%);
 }
