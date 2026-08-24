@@ -98,48 +98,81 @@ const artworkDetails = [
 
 const plants = [
   {
-    name: '龜背芋 Monstera',
-    type: '大型葉片 / 空間焦點',
-    image1: 'Plant View 01A',
-    image1Path: 'assets/images/plants/monstera-a.jpg',
-    image2: 'Plant View 01B',
-    image2Path: 'assets/images/plants/monstera-b.jpg',
-    description:
-      '龜背芋擁有大面積葉片與自然裂葉，能在客廳角落、接待區或展售空間建立明確的視覺重心。適合明亮的散射光環境，可搭配低矮家具、自然色盆器與植物水彩作品。',
-    colors: ['#d9ded2', '#cbd4c0'],
+    name: '香龍血樹（品種待確認）',
+    type: '黃綠條紋 / 寬葉姿態',
+    image1: '香龍血樹植株全貌',
+    image1Path: 'assets/images/products/fragrant-dracaena-01.jpg',
+    image2: '香龍血樹葉片細節',
+    image2Path: 'assets/images/products/fragrant-dracaena-02.jpg',
+    productUrl: 'products/fragrant-dracaena-pot.html',
+    description: '明亮黃綠條紋沿著寬長葉片展開，適合放在客廳、工作空間或有明亮散射光的角落。',
+    colors: ['#dce5ce', '#b9cc9e'],
   },
   {
-    name: '火鶴 Anthurium',
-    type: '花葉姿態 / 色彩亮點',
-    image1: 'Plant View 02A',
-    image1Path: 'assets/images/plants/anthurium-a.jpg',
-    image2: 'Plant View 02B',
-    image2Path: 'assets/images/plants/anthurium-b.jpg',
-    description:
-      '火鶴具有明確花形與帶有光澤的葉片，適合在桌面、玄關或展示層架形成小尺度焦點。可搭配低彩度畫作、霧面陶器與簡潔托盤，平衡其鮮明輪廓。',
-    colors: ['#e4d5d0', '#d7c3bd'],
+    name: '沙漠蘇木',
+    type: '曲折枝幹 / 細緻小葉',
+    image1: '沙漠蘇木植株全貌',
+    image1Path: 'assets/images/products/desert-sappanwood-01.jpg',
+    image2: '沙漠蘇木葉片細節',
+    image2Path: 'assets/images/products/desert-sappanwood-02.jpg',
+    productUrl: 'products/desert-sappanwood.html',
+    description: '纖細葉片沿著曲折枝幹展開，在小尺度盆栽裡保留樹木般的姿態，適合桌面與展示層架。',
+    colors: ['#d9d8c9', '#8c7d69'],
   },
   {
-    name: '小豆樹 China Doll',
-    type: '細緻葉形 / 輕盈線條',
-    image1: 'Plant View 03A',
-    image1Path: 'assets/images/plants/china-doll-a.jpg',
-    image2: 'Plant View 03B',
-    image2Path: 'assets/images/plants/china-doll-b.jpg',
-    description:
-      '小豆樹葉片細密、枝條輕盈，適合放在書房、工作桌旁或視覺密度較低的角落。它能柔化家具線條，又不會過度遮擋採光與主要視線。',
-    colors: ['#dbe3d6', '#c9d5c1'],
+    name: '蘇鐵',
+    type: '整齊葉序 / 直立輪廓',
+    image1: '蘇鐵植株全貌',
+    image1Path: 'assets/images/products/cycad-01.jpg',
+    image2: '蘇鐵葉片細節',
+    image2Path: 'assets/images/products/cycad-02.jpg',
+    productUrl: 'products/cycad.html',
+    description: '整齊葉序從中心向外舒展，以清楚而平衡的輪廓替桌面、玄關與留白空間加入綠意。',
+    colors: ['#d6dfcf', '#9eaa8d'],
   },
   {
-    name: '琴葉榕 Fiddle Leaf Fig',
-    type: '俐落線條 / 現代空間',
-    image1: 'Plant View 04A',
-    image1Path: 'assets/images/plants/fiddle-leaf-fig-a.jpg',
-    image2: 'Plant View 04B',
-    image2Path: 'assets/images/plants/fiddle-leaf-fig-b.jpg',
-    description:
-      '琴葉榕葉片厚實、線條俐落，具有清楚的垂直輪廓。適合放在採光良好的空間，與畫作、木質家具或白牆形成對比，並為較高的牆面建立尺度關係。',
-    colors: ['#d3dacb', '#becab5'],
+    name: '黃金火之戒蔓綠絨',
+    type: '黃綠斑紋 / 紅色新葉',
+    image1: '黃金火之戒蔓綠絨植株全貌',
+    image1Path: 'assets/images/products/golden-ring-of-fire-philodendron-01.jpg',
+    image2: '黃金火之戒蔓綠絨新葉細節',
+    image2Path: 'assets/images/products/golden-ring-of-fire-philodendron-02.jpg',
+    productUrl: 'products/golden-ring-of-fire-philodendron.html',
+    description: '深裂葉緣、黃綠斑紋與紅色新葉交錯，適合明亮客廳、工作空間或展示區。',
+    colors: ['#d8dfc9', '#b3c38e'],
+  },
+  {
+    name: '龍翼星蕨',
+    type: '深裂葉片 / 吊掛姿態',
+    image1: '龍翼星蕨吊盆全貌',
+    image1Path: 'assets/images/products/dragon-wing-star-fern-01.jpg',
+    image2: '龍翼星蕨葉片細節',
+    image2Path: 'assets/images/products/dragon-wing-star-fern-02.jpg',
+    productUrl: 'products/dragon-wing-star-fern.html',
+    description: '深裂葉片向外舒展，層層交錯的輪廓如同展翼，適合吊掛、層架與垂直綠化。',
+    colors: ['#d9e2ce', '#afc69c'],
+  },
+  {
+    name: '眼鏡蛇山蘇',
+    type: '波浪葉緣 / 雕塑株型',
+    image1: '眼鏡蛇山蘇植株全貌',
+    image1Path: 'assets/images/products/cobra-birds-nest-fern-01.jpg',
+    image2: '眼鏡蛇山蘇葉片細節',
+    image2Path: 'assets/images/products/cobra-birds-nest-fern-02.jpg',
+    productUrl: 'products/cobra-birds-nest-fern.html',
+    description: '厚實葉片帶著緊密波浪起伏向上生長，在有限尺度中形成集中而富有雕塑感的焦點。',
+    colors: ['#d2ddcc', '#9bad8c'],
+  },
+  {
+    name: '銀后虎尾蘭',
+    type: '銀綠寬葉 / 俐落直立',
+    image1: '銀后虎尾蘭植株全貌',
+    image1Path: 'assets/images/products/silver-queen-snake-plant-01.jpg',
+    image2: '銀后虎尾蘭葉片細節',
+    image2Path: 'assets/images/products/silver-queen-snake-plant-02.jpg',
+    productUrl: 'products/silver-queen-snake-plant.html',
+    description: '銀綠色寬葉向上收束，以乾淨俐落的輪廓替工作桌、玄關與小型空間加入自然亮度。',
+    colors: ['#d9e2d3', '#adc5b2'],
   },
 ];
 
@@ -379,6 +412,10 @@ const renderPlant = () => {
   setText('[data-plant-description]', plant.description);
   setPanel('[data-plant-image-one]', plant.image1, plant.colors[0], plant.image1Path);
   setPanel('[data-plant-image-two]', plant.image2, plant.colors[1], plant.image2Path);
+  document.querySelectorAll('[data-plant-product-link]').forEach((link) => {
+    link.href = plant.productUrl;
+    link.setAttribute('aria-label', `查看${plant.name}商品頁`);
+  });
 };
 
 const renderPlantDetail = () => {

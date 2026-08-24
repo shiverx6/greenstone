@@ -1050,6 +1050,26 @@ a {
   display: none;
 }
 
+.linked-image-panel {
+  color: inherit;
+  cursor: pointer;
+}
+
+.linked-image-panel::before {
+  transition: border-color 0.25s ease, inset 0.25s ease;
+}
+
+.linked-image-panel:hover::before,
+.linked-image-panel:focus-visible::before {
+  inset: clamp(13px, 1.5vw, 26px);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+
+.linked-image-panel:focus-visible {
+  outline: 2px solid rgba(52, 66, 56, 0.72);
+  outline-offset: -2px;
+}
+
 .image-slide {
   position: absolute;
   inset: 0;
